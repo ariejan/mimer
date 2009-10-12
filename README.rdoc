@@ -1,6 +1,33 @@
-= mimer
+= Mimer
 
-Description goes here.
+Mimer tries to find a file's mime-type by using unix' `file` command. File extensions are never used to identify a file.
+
+Mimer has been tested to work on Debian 5.0 and Mac OS X 10.5+. This gem is useless on Windows. 
+
+== Install
+
+    gem install mimer
+    
+You may need to install the gemcutter gem first.
+
+== Usage
+
+It's quite easy:
+
+    mimer = Mimer.identify('/tmp/testfile')
+    
+    mimer.mime_type
+    => "image/jpeg; charset=binary"
+    
+    mimer.text?
+    => false
+    
+    mimer.image?
+    => true
+
+== Get the code
+
+http://github.com/ariejan/mimer
 
 == Note on Patches/Pull Requests
  
@@ -15,4 +42,4 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2009 Ariejan de Vroom. See LICENSE for details.
+Copyright (c) 2009 Ariejan de Vroom, Kabisa ICT. See LICENSE for details.

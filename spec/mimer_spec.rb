@@ -1,7 +1,47 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Mimer" do
-  it "fails" do
-    fail "hey buddy, you should probably rename this file and start specing for real"
+    
+  it "should create a new Mimer instance with identify" do
+    m = Mimer.identify(fixture_path('plain.txt'))
+    
+    m.should_not be_nil
+    m.should be_a(Mimer)
   end
+  
+  it "should return nil if the file cannot be found" do
+    m = Mimer.identify(fixture_path('does_not.exist'))
+    
+    m.should be_nil
+  end
+  
+  describe "text" do
+    
+    before(:each) do
+      @mimer = Mimer.identify(fixture_path('plain.txt'))
+    end
+    
+    it "should identify mime correctly" do
+      @mimer.mime_type.should match(/text\/plain/)
+    end
+    
+    it "should find this text" do
+      @mimer.should be_text
+    end
+  end
+  
+  describe "image" do
+    
+    before(:each) do
+      @mimer = Mimer.identify(fixture_path('facepalm.jpg'))
+    end
+    
+    it "should identify mime correctly" do
+      @mimer.mime_type.should match(/image\/jpeg/)
+    end
+    
+    it "should find this image" do
+      @mimer.should be_image
+    end
+  end  
 end

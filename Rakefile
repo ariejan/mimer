@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "mimer"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Find the mime-type of a file using unix' `file` command.}
+    gem.description = %Q{Find the mime-type of a file using unix' `file` command. This does not look at file extension, ever.}
     gem.email = "ariejan@ariejan.net"
     gem.homepage = "http://github.com/ariejan/mimer"
     gem.authors = ["Ariejan de Vroom"]
@@ -15,9 +15,6 @@ begin
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
-  Jeweler::RubyforgeTasks.new do |rubyforge|
-    rubyforge.doc_task = "rdoc"
-  end
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
