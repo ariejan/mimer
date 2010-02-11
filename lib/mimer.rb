@@ -33,6 +33,17 @@ class Mimer
   def mime_type
     @mime_type
   end
+  
+  # Suggests an extention to use like .jpg or .png
+  def suggested_extension
+    case(mime_type)
+    when /^image\/jpeg/   : '.jpg'
+    when /^image\/gif/    : '.gif'
+    when /^image\/png/    : '.png'
+    else
+      nil
+    end
+  end
     
   # Returns true if the file is a text file.
   def text?

@@ -30,6 +30,23 @@ describe "Mimer" do
     end
   end
   
+  describe "image extensions" do
+    it "should work for jpeg" do
+      mimer = Mimer.identify(fixture_path('facepalm.jpg'))
+      mimer.suggested_extension.should eql(".jpg")
+    end
+    
+    it "should work for gif" do
+      mimer = Mimer.identify(fixture_path('google.gif'))
+      mimer.suggested_extension.should eql(".gif")
+    end
+    
+    it "should work for png" do
+      mimer = Mimer.identify(fixture_path('kirk.png'))
+      mimer.suggested_extension.should eql(".png")
+    end
+  end
+  
   describe "image" do
     
     before(:each) do
