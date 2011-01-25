@@ -37,9 +37,12 @@ class Mimer
   # Suggests an extention to use like .jpg or .png
   def suggested_extension
     case(mime_type)
-    when /^image\/jpeg/   : '.jpg'
-    when /^image\/gif/    : '.gif'
-    when /^image\/png/    : '.png'
+    when /^image\/jpeg/
+      '.jpg'
+    when /^image\/gif/
+      '.gif'
+    when /^image\/png/
+      '.png'
     else
       nil
     end
