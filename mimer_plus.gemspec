@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Linus Oleander", "Ariejan de Vroom"]
   s.email       = ["linus@oleander.nu", "ariejan@ariejan.net"]
-  s.homepage    = "https://github.com/oleander/Undertexter"
+  s.homepage    = "https://github.com/oleander/mimer"
   s.summary     = %q{Find the mime-type of a file using unix' `file` command. This does not look at file extension, ever.}
   s.description = %q{Find the mime-type of a file using unix' `file` command. This does not look at file extension, ever...}
 
