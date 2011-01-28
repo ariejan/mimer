@@ -6,7 +6,7 @@ Mimer has been tested to work on Debian 5.0 and Mac OS X 10.5+. This gem is usel
 
 == Install
 
-    gem install mimer
+    gem install mimer_plus
     
 You may need to install the gemcutter gem first.
 
@@ -14,16 +14,19 @@ You may need to install the gemcutter gem first.
 
 It's quite easy:
 
-    mimer = Mimer.identify('/tmp/testfile')
+    $ mimer = Mimer.identify('/tmp/testfile')
     
-    mimer.mime_type
+    $ mimer.mime_type
     => "image/jpeg; charset=binary"
     
-    mimer.text?
+    $ mimer.text?
     => false
     
-    mimer.image?
+    $ mimer.image?
     => true
+    
+    $ mimer.some_strange_type?
+    => false
 
 == Get the code
 
