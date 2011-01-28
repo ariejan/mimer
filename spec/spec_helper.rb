@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/../lib/mimer"
+require "#{File.dirname(__FILE__)}/../lib/mimer_plus"
 
 RSpec.configure do |config|
   
