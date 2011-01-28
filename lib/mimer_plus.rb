@@ -44,7 +44,7 @@ class Mimer
   
   # Responds to every method that ends with a question mark that isn't implemented in {Mimer}
   def method_missing(m, *args, &block)
-    return mime_type.match (/^#{m.to_s.gsub(/\?$/, '')}\/.*/i) if m.to_s.match(/\?$/)
+    return mime_type.match (/#{m.to_s.gsub(/\?$/, '')}/i) if m.to_s.match(/\?$/)
     super(m, *args, &block)
   end
   
