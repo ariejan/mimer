@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    mimer (0.0.2)
+    mimer_plus (0.0.3)
 
 GEM
   remote: http://rubygems.org/
@@ -20,5 +20,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mimer!
+  mimer_plus!
   rspec
