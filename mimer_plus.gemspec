@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "mimer_plus"
-  s.version     = "0.0.3"
+  s.version     = "0.0.4"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Linus Oleander", "Ariejan de Vroom"]
   s.email       = ["linus@oleander.nu", "ariejan@ariejan.net"]
