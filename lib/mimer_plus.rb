@@ -51,6 +51,6 @@ class Mimer
   private
     # Identifies the file and stores the result in +@mime_type+
     def identify!
-      @mime_type = `/usr/bin/env file --brief --mime #{@filename.gsub(/\s+/, '\ ')}`.strip
+      @mime_type = `/usr/bin/env file --brief --mime '#{@filename}'`.strip
     end
 end
