@@ -17,7 +17,7 @@
 #
 class Mimer
 
-  VERSION = "0.1.0-pre"
+  VERSION = "0.1.0"
 
   # Create a new Mimer object for the specified file.
   def self.identify(filename)
